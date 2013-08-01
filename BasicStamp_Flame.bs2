@@ -1,0 +1,19 @@
+' TestIrLedFlameDetect.bs2
+' See TestIrLedFlameDetect.PDF for Schematic.
+·
+' This is a novel application that uses the Boe-Bot
+' robot's IR LEDs to detect flame in an area devoid
+' of other sources of IR such as sunlight and halogen
+' lamps.
+
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+time VAR Word
+
+DO
+ HIGH 8
+ RCTIME 8, 1, time
+ DEBUG HOME, CLREOL, ? time
+ PAUSE 100
+LOOP
